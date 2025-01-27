@@ -32,7 +32,7 @@ export const App = () => {
   const [reversed, setReversed] = useState(false);
 
   if (reversed) {
-    visibleGoods = visibleGoods.toReversed();
+    visibleGoods = visibleGoods.reverse();
   }
 
   return (
@@ -83,7 +83,7 @@ export const App = () => {
       </div>
       <ul>
         {visibleGoods.map(good => (
-          <li data-cy="Good" key={visibleGoods.indexOf(good)}>
+          <li data-cy="Good" key={good}>
             {good}
           </li>
         ))}
